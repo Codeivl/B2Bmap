@@ -1,0 +1,178 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  image-rendering: pixelated;
+}
+
+.mouseposition {
+  background-color: white;
+  padding: 3px;
+  text-align: right;
+}
+
+.mousepositioncoord {
+  min-width: 40px;
+  display: inline-block;
+}
+
+div.ol-mouse-position {
+  background-color: white;
+  padding: 6px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ol-ctx-menu-container {
+  font-size: 16px;
+}
+
+.ol-scale-step-text {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black,
+    0px 0px 8px black;
+}
+
+.ol-scale-singlebar-odd {
+  background: #ddd;
+}
+
+.ol-scale-singlebar-even {
+  background: #444;
+}
+
+.toastify {
+  color: black;
+  background: yellow;
+}
+
+.ol-ctx-menu-container li {
+  padding-left: 20px;
+}
+
+.menuitem-checked::before {
+  content: "☑";
+  width: 20px;
+  display: inline-block;
+  margin-left: -20px;
+}
+
+.menuitem-unchecked::before {
+  content: "☐";
+  width: 20px;
+  display: inline-block;
+  margin-left: -20px;
+}
+
+.unmined-legend {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.unmined-legend-visible {
+  display: block;
+}
+
+.unmined-legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.unmined-legend-item img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.unmined-legend-item span {
+  font-size: 14px;
+}
+
+.unmined-legend-button {
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  z-index: 1001;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.unmined-tooltip {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  pointer-events: none;
+  max-width: 200px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 14px;
+  position: relative;
+}
+
+.unmined-tooltip:before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgba(255, 255, 255, 0.9);
+}
+
+.tooltip-content,
+.tooltip-icon {
+  display: none;
+}
+
+.marker-icon {
+  filter: drop-shadow(0 0 2px white) drop-shadow(0 0 2px white)
+    drop-shadow(0 0 2px white);
+}
+
+@media (max-width: 768px) {
+  .unmined-legend-mobile {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    max-height: 80%;
+    overflow-y: auto;
+  }
+}
