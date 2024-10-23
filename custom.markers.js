@@ -154,8 +154,8 @@ UnminedCustomMarkers = {
       font: "bold 17px Calibri,sans serif",
     },
     {
-      x: -38,
-      z: -268,
+      x: -18,
+      z: -235,
       image: "playerimages/skinIcon/Awitzzer.png",
       imageAnchor: [0.5, 1],
       imageScale: 0.08,
